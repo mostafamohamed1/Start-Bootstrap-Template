@@ -1,0 +1,310 @@
+:root {
+  --main-color: #ffc800;
+  --gray-color: #e9ecef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.show {
+  background-color: #212529;
+}
+
+.show .navbar-collapse .navbar-nav {
+  padding: 0.7rem 0 !important;
+}
+
+/* Start Navbar */
+.navbar {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  transition: 0.3s;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    background-color: #212529;
+  }
+}
+
+.navbar .navbar-brand {
+  flex-basis: 50%;
+  height: 100%;
+  padding: 0.5rem 0;
+}
+
+.navbar .navbar-brand img {
+  width: 180px;
+}
+
+.navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-collapse {
+  align-items: center;
+}
+
+.navbar .navbar-collapse .navbar-nav {
+  transition: 0.3s;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: var(--main-color);
+}
+
+/* End Navbar */
+
+/* Start Landing */
+.landing {
+  background-image: url(../img/header-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding-top: 18rem;
+  padding-bottom: 13.5rem;
+}
+
+.landing .subhead {
+  font-size: 2.25rem;
+  font-style: italic;
+  line-height: 2.25rem;
+  margin-bottom: 4rem;
+}
+
+.landing .heading {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  margin-bottom: 4rem;
+}
+
+.landing .btn-primary {
+  background-color: #ffc800;
+  border-color: #ffc800;
+}
+
+.landing .btn-xl {
+  padding: 1.25rem 2.5rem;
+  font-weight: 700;
+}
+
+/* End Landing */
+
+/* Start Services */
+.services {
+  padding: 7rem 0;
+}
+
+.services .service > span i {
+  font-size: 4rem;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  line-height: 7rem;
+  display: inline-block;
+}
+/* End Services */
+
+/* Start Portfolio */
+
+.portfolio {
+  background-color: rgba(248, 249, 250);
+  padding: 7rem 0;
+}
+
+.portfolio .imagehover {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.portfolio .imagehover:hover {
+  opacity: 0.9;
+}
+
+.portfolio .imagehover i {
+  font-size: 7rem;
+  color: white;
+}
+
+/* End Portfolio */
+
+/* Start About */
+.about {
+  padding: 7rem 0;
+}
+
+.about .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60px;
+  transform: translateX(-50%);
+  height: 95%;
+  width: 3px;
+  background-color: var(--gray-color);
+}
+
+@media (min-width: 992px) {
+  .about .timeline::before {
+    left: 50%;
+  }
+}
+
+.about .timeline li {
+  min-height: 220px;
+}
+
+.about .timeline li:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.about .timeline .image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  border: 7px solid var(--gray-color);
+}
+
+@media (max-width: 991px) {
+  .about .timeline .image {
+    left: 60px;
+  }
+  .about .timeline .image img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.about .timeline .image > span {
+  width: 100px;
+  height: 100px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.about .timeline .info {
+  text-align: left;
+  width: calc(100% - 150px);
+  float: right;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .about .timeline .info {
+    width: 41%;
+    padding: 0 30px 20px 20px;
+  }
+
+  .about .timeline .image > span {
+    width: 200px;
+    height: 200px;
+    background-color: var(--main-color);
+    color: white;
+  }
+}
+
+@media (max-width: 991px) {
+  .about .timeline .image > span span {
+    font-size: 14px !important;
+  }
+}
+
+/* End About */
+
+/* Start Team */
+.team {
+  padding: 7rem 0;
+  background-color: rgba(248, 249, 250);
+}
+
+.team .team-work {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team .image {
+  border: 10px solid var(--gray-color);
+}
+
+.team .image img {
+  width: 200px;
+  height: 200px;
+}
+
+.team .icons a {
+  width: 45px;
+  height: 45px;
+}
+.team .icons a i {
+  color: white;
+}
+/* End Team */
+
+/* Start Clients */
+.clients {
+  padding: 3.5rem 0;
+}
+
+.clients .row a img {
+  height: 3.5rem;
+}
+/* End Clients */
+
+/* Start Contact */
+.contact {
+  padding: 7rem 0;
+  background-color: #212529;
+  background-image: url('../img/map-image.png');
+}
+
+.contact textarea {
+  min-height: 200px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 1px solid var(--main-color);
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #ddd;
+}
+
+.contact .btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+/* End Contact */
+
+/* Start Footer */
+.footer {
+  padding: 3rem 0;
+}
+/* End Footer */
